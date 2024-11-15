@@ -48,10 +48,22 @@ nav a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 6rem 2rem;
-    background: linear-gradient(135deg, #3498db, #2c3e50);
+    padding: 2rem 2rem;
+    background: linear-gradient(135deg, #13263a, #0056b3);
     color: white;
-    margin-bottom: 2rem;
+}
+
+.hero::after {
+    content: ""; 
+    display: table; 
+    clear: both; /* Clear floats */
+}
+.user-photo {
+    border-radius: 50%; /* Making it round */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    float: left; /* Float image to the left */
+    margin-right: 20px; /* Space between image and text */
 }
 
 .hero h1 {
@@ -167,26 +179,22 @@ section h2::after {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.project-title {
+    font-size: 1.5rem;
+    color: #113a69;
+    margin-bottom: 0.5rem;
 }
 
-.project-card:hover img {
-    transform: scale(1.05);
+.repo-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #2877ac;
 }
-
 .project-content {
     padding: 1.5rem;
 }
 
-.project-content h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
 
 /* Contact Section */
 .contact {
@@ -194,28 +202,9 @@ section h2::after {
 }
 
 .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-}
-
-.loading-spinner {
-    display: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: spin 1s linear infinite;
+    align-items: center;
 }
 
 @keyframes spin {
